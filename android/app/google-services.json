@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "563940441607",
+    "project_id": "truyen-2c813",
+    "storage_bucket": "truyen-2c813.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563940441607:android:785c9891c412a2264c74a2",
+        "android_client_info": {
+          "package_name": "com.example.btn_didong"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563940441607-ed5kj4qrtqqpo26e9gkeibkei6qrbgb4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.btn_didong",
+            "certificate_hash": "443dca84e35facb8ea42662e43178cacdd4e0f9d"
+          }
+        },
+        {
+          "client_id": "563940441607-hfd94b2tv1h6ehnhu9t6iudeh4b6g5v7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRtYq-xFAl8MmC69pT0tTus-_ffNzypCQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563940441607-hfd94b2tv1h6ehnhu9t6iudeh4b6g5v7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
