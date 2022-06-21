@@ -1,7 +1,10 @@
+import 'package:btn_didong/Search/TimKiem.dart';
 import 'package:btn_didong/TacPham/Xem.dart';
 import 'package:btn_didong/TrangChu/TrangChu.dart';
 import 'package:btn_didong/my_profile/my_profile.dart';
 import 'package:flutter/material.dart';
+
+import '../yeuThich/TrangYeuThich.dart';
 
 // import '../cloud_firestore/page_home_friebase_app.dart';
 
@@ -39,7 +42,7 @@ class _MNDrawerState extends State<MNDrawer> {
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        color: Colors.yellow,
+        color: Colors.amberAccent,
         child: ListView(
           children: [
             DrawerHeader(
@@ -102,17 +105,28 @@ class _MNDrawerState extends State<MNDrawer> {
                 );
               },
             ),
-            // listTile(
-            //   icon: Icons.perm_identity,
-            //   title: "Firebase",
-            //   onTap: () {
-            //     Navigator.of(context).push(
-            //       MaterialPageRoute(
-            //         builder: (context) => PageHomeFirebase(),
-            //       ),
-            //     );
-            //   },
-            // ),
+            listTile(
+              icon: Icons.favorite,
+              title: "Yêu thích",
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => ReviewCartPage(),
+                  ),
+                );
+              },
+            ),
+            listTile(
+              icon: Icons.search,
+              title: "Tìm kiếm",
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => Search(),
+                  ),
+                );
+              },
+            ),
             // listTile(
             //   icon: Icons.remove_red_eye_rounded,
             //   title: "Tiến Hóa Cuồng",

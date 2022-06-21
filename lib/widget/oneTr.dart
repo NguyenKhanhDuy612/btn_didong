@@ -30,12 +30,7 @@ class HTTruyen extends StatelessWidget {
                         flex: 2,
                         child: Padding(
                             padding: const EdgeInsets.symmetric(vertical: 10),
-                            // child: FadeInImage(
-                            //   placeholder: AssetImage(urlImage+"loading_1.gif"),
-                            //   image: NetworkImage(sp.anh!,
-                            //   ),
-                            // )
-                          child: Image.network(tr.AnhT!),
+                          child: Image.network(tr.AnhT!, fit: BoxFit.fill,),
                         )
                     ),
                     Expanded(
@@ -47,9 +42,6 @@ class HTTruyen extends StatelessWidget {
                                 style: TextStyle(fontSize: 12),
                                 textAlign: TextAlign.center,
                               ),
-                              // Text(tr.gia.toString(),
-                              //   style: TextStyle(fontSize: 12, color: Colors.red),
-                              // ),
                             ],
                           ),
                         )

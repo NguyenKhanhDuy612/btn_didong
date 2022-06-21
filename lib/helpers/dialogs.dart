@@ -9,7 +9,7 @@ Future<String?> showConfirmDialog(BuildContext context, String dispMessage) asyn
           onPressed: () => Navigator.of(context, rootNavigator: true).pop("cancel"),
           child: const Text("Hủy")),
       ElevatedButton(onPressed: () => Navigator.of(context, rootNavigator: true).pop("ok"),
-          child: const Text("Ok")),
+          child: const Text("Đồng ý")),
     ],
   );
   String? res = await showDialog<String?>(
@@ -32,6 +32,7 @@ Future<String?> showConfirmDialog1(BuildContext context, String dispMessage) asy
           onPressed: (){
             Navigator.of(context, rootNavigator: true).pop("ok");
           },
+
           child: const Text("Xóa!")),
     ],
   );

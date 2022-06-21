@@ -37,13 +37,6 @@ class ProductProvider with ChangeNotifier {
     notifyListeners();
   }
 
-
-
-
-
-
-  ////
-
   TruyenData() async {
     List<truyen> newListT = [];
     QuerySnapshot value =
@@ -62,10 +55,6 @@ class ProductProvider with ChangeNotifier {
     _truyenDS = newListT;
     notifyListeners();
   }
-
-
-
 }
 
-///////////////////////
 

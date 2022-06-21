@@ -23,9 +23,10 @@ class MyProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: primaryColor,
+      backgroundColor: Colors.amberAccent,
       appBar: AppBar(
-        // backgroundColor: primaryColor,
+        iconTheme: IconThemeData(color: Colors.black),
+        backgroundColor: Colors.amberAccent,
         elevation: 0.0,
         title: Text(
           "Tài khoản",
@@ -42,7 +43,7 @@ class MyProfile extends StatelessWidget {
             children: [
               Container(
                 height: 100,
-                color: primaryColor,
+                color: Colors.amberAccent,
               ),
               Container(
                 height: 655,
