@@ -1,4 +1,11 @@
-# btn_didong
+# Bài Tập nhóm 3
+##Thành viên nhóm:
+## Nguyễn Minh Trí
+## Nguyễn Khánh Duy
+## Nguyễn Lê Thành Tâm
+## Đỗ Tuấn Kiệt
+## Phan Thị Huyền Trâm
+## Nguyễn Quốc Châu
 
 A new Flutter project.
 
