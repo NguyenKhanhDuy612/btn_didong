@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:btn_didong/Mau/color.dart';
 
+import '../my_profile/class_truyen.dart';
+
 class XemChiTiet extends StatefulWidget {
-  final String productName;
-  final String productImage;
-  final String productND;
+  truyen tr;
 
-  XemChiTiet({Key? key,required this.productImage,required this.productName,required this.productND}) : super(key: key);
-
-
+  XemChiTiet({Key? key, required this.tr}) : super(key: key);
 
   @override
   State<XemChiTiet> createState() => _XemChiTietState();
@@ -47,6 +45,13 @@ class _XemChiTietState extends State<XemChiTiet> {
     );
   }
 
+  late truyen tr;
+
+  @override
+  void initState() {
+    tr = widget.tr;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,7 +83,7 @@ class _XemChiTietState extends State<XemChiTiet> {
                 children: [
                   ListTile(
                     title: Text(
-                      widget.productName,
+                      tr.TenT!,
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
                     ),
@@ -86,10 +91,8 @@ class _XemChiTietState extends State<XemChiTiet> {
                   Container(
                     height: 250,
                     padding: EdgeInsets.all(40),
-                    child: Image.network(
-                        widget.productImage),
+                    child: Image.network(tr.AnhT!),
                   ),
-
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 10),
                   ),
@@ -98,29 +101,32 @@ class _XemChiTietState extends State<XemChiTiet> {
             ),
           ),
           Expanded(
-              child: Container(
-            padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-            width: double.infinity,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Tóm tắt truyện",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+            child: Container(
+              padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+              width: double.infinity,
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Tóm tắt truyện",
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      tr.NdT!,
+                      // "Ngô Kỳ, một sát thủ truyền kỳ lỡ tay bị giết, người sát hại mình là ai cũng không biết. Hệ thống Sát Ý bất ngờ xuất hiện trước mặt hắn, chỉ cần hắn hoàn thành nhiệm vụ là giúp hắn hồi sinh, và cho hắn biết chân tướng về cái chết của hắn. Ngô…",
+                      style: TextStyle(
+                        fontSize: 18,
+                      ),
+                    ),
+                  ],
                 ),
-                SizedBox(
-                  height: 10,
-                ),
-                Text( widget.productND,
-                  // "Ngô Kỳ, một sát thủ truyền kỳ lỡ tay bị giết, người sát hại mình là ai cũng không biết. Hệ thống Sát Ý bất ngờ xuất hiện trước mặt hắn, chỉ cần hắn hoàn thành nhiệm vụ là giúp hắn hồi sinh, và cho hắn biết chân tướng về cái chết của hắn. Ngô…",
-                  style: TextStyle(
-                    fontSize: 15,
-                  ),
-                ),
-
-              ],
+              ),
             ),
-          ),),
+          ),
         ],
       ),
     );

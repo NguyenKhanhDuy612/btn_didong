@@ -1,4 +1,5 @@
 import 'package:btn_didong/Mau/color.dart';
+import 'package:btn_didong/my_profile/provider.dart';
 import 'package:btn_didong/provider/product_provider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -19,8 +20,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<ProductProvider>(
-      create: (context) => ProductProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => ProductProvider(),),
+      ],
       child: MaterialApp(
         theme: ThemeData(
           primaryColor: primaryColor,
