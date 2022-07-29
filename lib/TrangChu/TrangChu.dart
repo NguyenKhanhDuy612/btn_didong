@@ -36,9 +36,7 @@ class _TrangChuState extends State<TrangChu> {
     List<truyen> listT = productProvider.getDStruyen;
 
     return Scaffold(
-      // backgroundColor: Color(0xffcbcbcb),
       drawer: MNDrawer(),
-
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.black),
         title: Text(
@@ -47,24 +45,6 @@ class _TrangChuState extends State<TrangChu> {
         ),
         backgroundColor: Colors.amberAccent,
         actions: [
-          // CircleAvatar(
-          //   radius: 12,
-          //   backgroundColor: Colors.grey,
-          //   child: IconButton(
-          //     onPressed: () {
-          //       Navigator.of(context).push(
-          //         MaterialPageRoute(
-          //           builder: (context) => Search(),
-          //         ),
-          //       );
-          //     },
-          //     icon: Icon(
-          //       Icons.search,
-          //       size: 20,
-          //       color: Colors.black,
-          //     ),
-          //   ),
-          // ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 5),
             child: CircleAvatar(

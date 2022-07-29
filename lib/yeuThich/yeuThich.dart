@@ -8,7 +8,6 @@ import 'class_yeu_thich.dart';
 class ReviewCartProvider extends ChangeNotifier{
 
   List<ReviewCart> _listCart = [];
-
   ReviewCart? reviewCart;
 
 
@@ -59,28 +58,5 @@ class ReviewCartProvider extends ChangeNotifier{
         .delete();
     notifyListeners();
   }
-
-  // deleteAllViewCart(String id){
-  //   FirebaseFirestore.instance.collection("ReviewCart")
-  //       .doc(id)
-  //       .collection("YourReviewCart")
-  //       .get().then((snapshot) {
-  //     for (DocumentSnapshot ds in snapshot.docs){
-  //       ds.reference.delete();
-  //     }
-  //   });
-  //   notifyListeners();
-  // }
-
-
-  // updataReviewCart(ReviewCart reviewCart ){
-  //   FirebaseFirestore.instance.collection("ReviewCart")
-  //       .doc(FirebaseAuth.instance.currentUser!.uid)
-  //       .collection("YourReviewCart")
-  //       .doc("${reviewCart.id}")
-  //       .update(reviewCart.toJson());
-  // }
-
-
 
 }

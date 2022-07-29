@@ -1,11 +1,9 @@
 import 'package:btn_didong/Mau/color.dart';
 import 'package:btn_didong/my_profile/provider.dart';
 import 'package:btn_didong/yeuThich/yeuThich.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import 'GiaoDien1/dangNhap.dart';
 
 void main() async{
@@ -28,6 +26,7 @@ class MyApp extends StatelessWidget {
           create: (context) => ReviewCartProvider(),),
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primaryColor: primaryColor,
           scaffoldBackgroundColor: scaffoldBackgroundColor,

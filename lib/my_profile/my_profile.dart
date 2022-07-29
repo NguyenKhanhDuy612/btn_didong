@@ -1,11 +1,20 @@
+import 'package:btn_didong/GiaoDien1/DanhGia.dart';
+import 'package:btn_didong/GiaoDien1/GioiThieu.dart';
+import 'package:btn_didong/GiaoDien1/GopY.dart';
+import 'package:btn_didong/GiaoDien1/dieuKhoan.dart';
 import 'package:btn_didong/Mau/color.dart';
 import 'package:btn_didong/TrangChu/MenuDR.dart';
 import 'package:flutter/material.dart';
 
+import '../GiaoDien1/dangNhap.dart';
+
 class MyProfile extends StatelessWidget {
   const MyProfile({Key? key}) : super(key: key);
 
-  Widget listTile({required IconData icon, required String title}) {
+  Widget listTile(
+      {required IconData icon,
+      required String title,
+      required Null Function() onTap}) {
     return Column(
       children: [
         Divider(
@@ -85,36 +94,66 @@ class MyProfile extends StatelessWidget {
                                   Text("duy.nk.61cntt@ntu.edu.vn"),
                                 ],
                               ),
-                              // CircleAvatar(
-                              //   radius: 15,
-                              //   backgroundColor: primaryColor,
-                              //   child: CircleAvatar(
-                              //     radius: 12,
-                              //     child: Icon(
-                              //       Icons.edit,
-                              //       color: primaryColor,
-                              //     ),
-                              //     backgroundColor: scaffoldBackgroundColor,
-                              //   ),
-                              // ),
                             ],
                           ),
                         ),
                       ],
                     ),
-                    listTile(icon: Icons.file_copy_outlined, title: "Giới thiệu"),
                     listTile(
-                        icon: Icons.star,
-                        title: "Đánh giá"),
+                      icon: Icons.file_copy_outlined,
+                      title: "Giới thiệu",
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => GioiThieu(),
+                          ),
+                        );
+                      },
+                    ),
                     listTile(
-                        icon: Icons.messenger_outline_sharp, title: "Góp ý"),
-                    listTile(icon: Icons.add_chart, title: "Điều khoản"),
-
+                      icon: Icons.star,
+                      title: "Đánh giá",
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => DanhGia(),
+                          ),
+                        );
+                      },
+                    ),
                     listTile(
-                        icon: Icons.exit_to_app_outlined,
-                        title: "Đăng suất"),
-
-
+                      icon: Icons.messenger_outline_sharp,
+                      title: "Góp ý",
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => GopY(),
+                          ),
+                        );
+                      },
+                    ),
+                    listTile(
+                      icon: Icons.add_chart,
+                      title: "Điều khoản",
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => DieuKhoan(),
+                          ),
+                        );
+                      },
+                    ),
+                    listTile(
+                      icon: Icons.exit_to_app_outlined,
+                      title: "Đăng xuất",
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => DangNhap(),
+                          ),
+                        );
+                      },
+                    ),
                   ],
                 ),
               ),

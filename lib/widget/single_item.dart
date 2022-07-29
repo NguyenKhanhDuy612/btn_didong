@@ -24,7 +24,6 @@ class _SingleItemState extends State<SingleItem> {
   bool? inCart = false;
   ReviewCart? reviewCart;
   String? AnhT, TenT;
-  // truyen? tr;
   List<truyen>? tr = [];
   @override
   void initState() {
@@ -47,8 +46,6 @@ class _SingleItemState extends State<SingleItem> {
           ),
         )),
         Expanded(
-
-            // can
             child: Container(
           height: 100,
           child: Column(

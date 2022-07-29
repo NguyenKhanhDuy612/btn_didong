@@ -13,7 +13,6 @@ class DangNhap extends StatefulWidget {
 }
 
 class _DangNhapState extends State<DangNhap> {
-  // UserProvider userProvider;
   Future<UserCredential> signWithGoogle() async {
     final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
     final GoogleSignInAuthentication? googleAuth =
@@ -42,7 +41,6 @@ class _DangNhapState extends State<DangNhap> {
             Container(
               height: 400,
               width: double.infinity,
-              // color: Colors.red,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -53,18 +51,6 @@ class _DangNhapState extends State<DangNhap> {
                   SizedBox(
                     height: 30,
                   ),
-                  // Text(
-                  //   "WELCOM",
-                  //   style: TextStyle(
-                  //       fontSize: 50,
-                  //       color: Colors.white,
-                  //       shadows: [
-                  //         BoxShadow(
-                  //             blurRadius: 5,
-                  //             color: Colors.green.shade900,
-                  //             offset: Offset(3, 3))
-                  //       ]),
-                  // ),
                   Column(
                     children: [
                       SignInButton(
@@ -77,52 +63,42 @@ class _DangNhapState extends State<DangNhap> {
                             ),
                           );
                           // showSnackBar(context,"singning ////",3000);
-                          var user = await signWithGoogle();
-                          if (user != null) {
+                          // var user = await signWithGoogle();
+                          // if (user != null) {
                             Navigator.of(context).pushAndRemoveUntil(
                                 MaterialPageRoute(
-                                    builder: (context) => const TrangChu()),
-                                (Route<dynamic> route) => false);
-                          } else {
-                            setState(() {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                  content: Text('loi.'),
+                                  builder: (context) => const TrangChu(),
                                 ),
-                              );
-                            });
-                          }
-                        },
+                                (Route<dynamic> route) => false);
+                          // } else {
+                          //   setState(
+                          //     () {
+                          //       ScaffoldMessenger.of(context).showSnackBar(
+                          //         const SnackBar(
+                          //           content: Text('loi.'),
+                          //         ),
+                          //       );
+                          //     },
+                          //   );
+                          },
+                        // },
                       ),
-                      // SignInButton(
-                      //   Buttons.Email,
-                      //   text: "Đăng nhập bằng Email",
-                      //   onPressed: () {
-                      //     GoogleSignIn().then(
-                      //       (value) => Navigator.of(context).pushReplacement(
-                      //         MaterialPageRoute(
-                      //           builder: (context) => HomeScreen(),
-                      //         ),
-                      //       ),
-                      //     );
-                      //   },
-                      // ),
                     ],
                   ),
-                  // SizedBox(
-                  //   height: 70,
-                  // ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 20),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 10, vertical: 20),
                     child: Column(
                       children: [
                         Text(
                           "Bằng cách đăng nhập bạn đồng ý với các",
-                          style: TextStyle(color: Colors.grey[100], fontSize: 15),
+                          style:
+                              TextStyle(color: Colors.grey[100], fontSize: 15),
                         ),
                         Text(
                           "Điều khoản và Chính sách Bảo mật của chúng tôi",
-                          style: TextStyle(color: Colors.grey[100], fontSize: 15),
+                          style:
+                              TextStyle(color: Colors.grey[100], fontSize: 15),
                         ),
                       ],
                     ),
@@ -136,4 +112,3 @@ class _DangNhapState extends State<DangNhap> {
     );
   }
 }
-

@@ -11,7 +11,7 @@ Widget buidProduct(
       }) {
   return listT.where((e) => e.MaTL == tl.MaTL).length >= 1
       ? Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
               padding: EdgeInsets.symmetric(vertical: 5),

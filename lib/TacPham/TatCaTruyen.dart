@@ -1,5 +1,4 @@
 import 'package:btn_didong/TacPham/Xem.dart';
-import 'package:btn_didong/TacPham/catogery.dart';
 import 'package:btn_didong/my_profile/class_truyen.dart';
 import 'package:flutter/material.dart';
 

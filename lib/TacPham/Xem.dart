@@ -18,38 +18,6 @@ class XemChiTiet extends StatefulWidget {
 }
 
 class _XemChiTietState extends State<XemChiTiet> {
-  Widget btNaBar({
-    required Color iconCL,
-    required Color bgCL,
-    required Color cl,
-    required String title,
-    required IconData iconData,
-  }) {
-    return Expanded(
-      child: Container(
-        padding: EdgeInsets.all(20),
-        color: bgCL,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              iconData,
-              size: 17,
-              color: iconCL,
-            ),
-            SizedBox(
-              width: 5,
-            ),
-            Text(
-              title,
-              style: TextStyle(color: cl),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
   late truyen tr;
 
   @override
@@ -59,9 +27,7 @@ class _XemChiTietState extends State<XemChiTiet> {
 
   @override
   Widget build(BuildContext context) {
-
     double width = MediaQuery.of(context).size.width;
-
     ReviewCartProvider provider = Provider.of(context);
     return Scaffold(
       bottomNavigationBar: Row(
@@ -90,7 +56,6 @@ class _XemChiTietState extends State<XemChiTiet> {
               child: Container(
                 width: width,
                 height:40 ,
-
                 decoration: BoxDecoration(
                   color: Colors.amberAccent,
                   border: Border.all(color: Colors.amberAccent),
@@ -121,15 +86,6 @@ class _XemChiTietState extends State<XemChiTiet> {
               ),
             ),
           ),
-          // btNaBar(
-          //   bgCL: Colors.amberAccent,
-          //   cl: Colors.black,
-          //   iconCL: Colors.red,
-          //   title: "Thêm vào yêu thích",
-          //   iconData: Icons.favorite,
-          //
-          // ),
-
         ],
       ),
       appBar: AppBar(
@@ -191,7 +147,6 @@ class _XemChiTietState extends State<XemChiTiet> {
                       ),
                       Text(
                         tr.NdT!,
-                        // "Ngô Kỳ, một sát thủ truyền kỳ lỡ tay bị giết, người sát hại mình là ai cũng không biết. Hệ thống Sát Ý bất ngờ xuất hiện trước mặt hắn, chỉ cần hắn hoàn thành nhiệm vụ là giúp hắn hồi sinh, và cho hắn biết chân tướng về cái chết của hắn. Ngô…",
                         style: TextStyle(
                           fontSize: 18,
                         ),
